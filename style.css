@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+
+body
+{
+	font-family: "Open Sans";
+	background-color: #e2e2e2;
+}
+#main
+{
+	width: 90%;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: repeat(100%);
+	grid-row-gap: 50px;
+
+}
+.post
+{
+	background-color: #d0deea;
+	display: grid;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 'head'
+						 'body'
+						 'comments';
+	grid-row-gap: 20px;
+	padding: 10px;
+	border: 1px solid #cecece;
+	border-radius: 10px;
+}
+.post__head 
+{
+	grid-area: head;
+	display: grid;
+	grid-template-columns: (1, 100%);
+	grid-row-gap: 20px;
+}
+.post__body
+{
+	grid-area: body;
+}
+.post__comments
+{
+	border: 2px dotted #142163;
+	border-radius: 15px;
+	padding: 10px;
+	grid-area: comments;
+	display: grid;
+	grid-template-columns: repeat(1, 100%);
+	grid-row-gap: 10px;
+}
+.comment
+{
+	border-bottom: 2px dotted #142163;
+	padding: 10px 0;
+	display: grid;
+	grid-template-columns: (1, 100%);
+	grid-row-gap: 20px;
+}
+.comment:last-child
+{
+	border-bottom: none;
+}
